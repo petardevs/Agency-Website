@@ -872,8 +872,7 @@ header.scrolled::before {
    z-index: 99;
 }
 .button span {
-   mix-blend-mode: difference;
-   color: #fff;
+   color: #000;
 }
 .button::before {
    position: absolute;
@@ -881,7 +880,7 @@ header.scrolled::before {
    border-radius: 100%;
    width: 50%;
    height: 0;
-   background: var(--gray);
+   background: #8e8e8e74;
    left: 50%;
    transform: translateX(-50%);
    top: -50%;
@@ -1236,7 +1235,7 @@ h2 {
    margin: 40px auto 20px;
 }
 
-.testimonial4_slide h4 {
+.testimonial4_slide h3 {
    color: #ffffff;
    font-size: 22px;
 }
