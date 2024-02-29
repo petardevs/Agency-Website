@@ -294,6 +294,7 @@ h3 {
 }
 .loader #logo {
    max-height: 50%;
+   max-width: 70%;
    transition: opacity 0.7s ease;
    animation: fill 0.5s ease forwards 3s;
 }
@@ -740,10 +741,7 @@ header.scrolled::before {
    text-align: left;
    letter-spacing: -.2px;
    text-shadow: 0 1px rgba(0,0,0,.07);
-   -webkit-text-fill-color: transparent;
-   background-image: linear-gradient(145deg,#fff 45%,rgba(255,255,255,.43));
-   -webkit-background-clip: text;
-   background-clip: text;
+   color: var(--light);
    margin-top: 0;
    margin-bottom: 24px;
    line-height: 1.08;
@@ -1920,6 +1918,31 @@ form.error .flex .input-field span.red {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
    }
+   .section-home .row .column {
+      width: 0;
+   }
+   .section-home .row .column:first-child {
+      width: 100%;
+   }
+   .intro-block h1{
+      font-size: 50px;
+   }
+   .section-home .intro-block p {
+      font-size: 19px;
+   }
+   .section-home .button {
+      font-size: 17px;
+      padding: 10px 20px;
+   }
+   .section-home .row .column img {
+      display: none;
+   }
+   .section-home .intro-block .youtube p {
+      display: none;
+   }
+   .section-home .container {
+      padding: 0 30px;
+   }
 }
 
 @media (max-width:1115px) {
@@ -1942,24 +1965,30 @@ form.error .flex .input-field span.red {
 
 @media (max-width:800px) {
    .footer {
-      padding-top: 10px;
+      padding: 0;
    }
-
-   .footer .row .about p {
-      max-width: 80%;
+   .footer-flex {
+      flex-wrap: wrap;
+      row-gap: 50px;
    }
-
-   .footer .row {
-      flex-direction: column;
-      align-items: center !important;
+   .footer-year {
+      margin-left: 0;
    }
-
-   .footer .row .about {
-      text-align: center;
+   .footer-col {
+      min-width: 100%;
    }
-
-   .footer .row .socials {
-      text-align: center;
+   .footer-col-2 {
+      width: 160px;
+   }
+   .footer-col-2 {
+      margin-right: 0;
+   }
+   .footer .padding {
+      width: 100% !important;
+      padding: 0 20px;
+   }
+   .footer-bottom {
+      margin-top: 50px;
    }
 }
 
@@ -2061,6 +2090,24 @@ form.error .flex .input-field span.red {
    .testimonial4_slide p {
       font-size: 17px;
    }
+
+   .footer-heading,
+   .footer-link {
+      font-size: 14px;
+      margin-bottom: 14px;
+   }
+   .footer-col-2 {
+      width: auto;
+   }
+   .footer-flex {
+      gap: 70px;
+   }
+   .footer-socials {
+      display: none;
+   }
+   .footer-year {
+      margin: 0 auto;
+   }
 }
 
 @media (max-width: 550px) {
@@ -2072,9 +2119,7 @@ form.error .flex .input-field span.red {
 }
 
 @media (max-width: 500px) {
-   .section-home .buttons {
-      flex-direction: column;
-   }
+   
 
    .section-home .button {
       font-size: 17px;
@@ -2083,5 +2128,9 @@ form.error .flex .input-field span.red {
 
    .section-home .btn {
       font-size: 17px;
+   }
+   
+   .footer-flex {
+      gap: 45px;
    }
 }
